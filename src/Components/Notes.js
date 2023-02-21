@@ -1,19 +1,16 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import Files from "../Components/Files";
-
 import axios from "axios";
 // import Note from "./Note";
 import { SearchBar } from "./SearchBar";
-// CSS
-
 //! Draggables DnD
-// import drag context ftom beaiful dnd
+// Import drag context ftom beaiful dnd
 // Dropable -- sets an area that allows for individual items to move around
-// Draggable -- raps every <li>items so that they can be dragged
+// Draggable -- raps every <li> items so that they can be dragged
 import { DragDropContext, Droppable, Draggable } from "react-beautiful-dnd";
 import CreateNote from "./CreateNote";
-//
+
 const API = process.env.REACT_APP_API_URL;
 
 export default function Notes({
@@ -23,17 +20,18 @@ export default function Notes({
 }) {
   const [myNotes, setMyNotes] = useState([]);
   //! Search State - Save user Input
-  const [search, setSearch] = useState("");
-  //
+  const [search, setSearch] = useState(""); // represents user input in the searchBar
+  // SearchBar state - matched saved quiery and saves it. 
   const [filtered, setFiltered] = useState([]);
   //* Draggging State
   const [dragNote, setDragNote] = useState(filtered);
+  // useEffect is used to fetch all the notes from server ... Then stores it to 
   useEffect(() => {
     axios
       .get(`${API}/notes`)
       .then((res) => {
-        setFiltered(res.data); //
-        setMyNotes(res.data);
+        setFiltered(res.data); // stores the fetched notes to be used to filter
+        setMyNotes(res.data); // stores the fecthed noted to be mapped and displayed
       })
       .catch((error) => console.warn(error));
   }, []);
@@ -55,8 +53,7 @@ export default function Notes({
                   className="  [&>*:nth-child(odd)]:text-zinc-500 [&>*:nth-child(even)]:text-sky-400 flex flex-wrap justify-evenly gap-2"
                   // {...provided.droppableProps}
                   // ref={provided.ref}
-                >
-                
+                >                
                   <CreateNote
                     handleSubmit={handleSubmit}
                     handleCheckChange={handleCheckChange}
