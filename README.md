@@ -18,7 +18,7 @@ Note-It is an app that allows the user to create, view, update and even delete a
 
 ## How to use Note-It
 * THe home page will soon allow a user to sign in or create an account to use their own instance of the app.
-* Download the Back-end Repo as well, in order to use this app on your local machine. Else, Launch this [Deployed on Surge](furtive-quicksand.surge.sh) to use on any machine or device at any time and place, as long as you have internet connectivity.
+* Download the Back-end Repo as well, in order to use this app on your local machine. Else, Launch this [Netlify](https://comforting-narwhal-b6d61a.netlify.app/) to use on any machine or device at any time and place, as long as you have internet connectivity.
 
 1. As a user, upon page load I should be able to see a navbar with the app title and a mode button
 2. As a user, I should be able to see a main area which displays my notes
