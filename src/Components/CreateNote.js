@@ -76,7 +76,7 @@ export default function CreateNote() {
   };
 
   return (
-    <div>
+    <div >
       {formModal ? (
         <form
           className="bg-emerald-400 h-[25rem] absolute z-10 m-4 p-3 rounded-br-xl "
@@ -195,4 +195,5 @@ export default function CreateNote() {
       )}
     </div>
   );
+
 }

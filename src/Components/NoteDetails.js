@@ -7,7 +7,7 @@ import { BsTrash } from "react-icons/bs";
 //TODO: Import DragDrop WHen Added
 import trash from ".././assets/trash.mp3";
 const API = process.env.REACT_APP_API_URL;
-function NoteDetails() {
+function NoteDetails({files, handleDelete}) {
   const playMySound = (src) => {
     const mySound = new Howl({
       src,
@@ -61,10 +61,10 @@ function NoteDetails() {
       <div className="note-body">
         <p>{note.content}</p>
       </div>
-      {/* <footer>
-        <p>{note.is_bookmark ? "⭐️" : null}</p>
-              <button disabled="disabled">✅</button>
-      </footer> */}
+      <footer>
+      <div>
+       </div>
+      </footer>
       <div className="flex my-auto">
         <button
           className="mx-2 bg-neutral-800 hover:bg-red-800 py-2 px-5 rounded-md text-white"
