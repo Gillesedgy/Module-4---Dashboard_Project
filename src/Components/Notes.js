@@ -46,17 +46,17 @@ p
           {filtered.map(
             ({ id, date, time, content, is_bookmark, title }, index) => {
               return (
-                <li key={id} className="bg-sky-100 w-80 h-[10rem] pl-2 rounded-xl bg-gradient-to-br from-sky-100 via-sky-50 to-sky-200 p-6">
+                <li key={id} className="bg-sky-100 w-80 min-h-[10rem] pl-2 rounded-xl bg-gradient-to-br from-sky-100 via-sky-50 to-sky-200 p-6">
                   <Link to={`/notes/${id}`}>
                     <div className="Header">
                       <h3>{title}</h3> <b>{date}</b> <b>{time}</b>
                     </div>
                     <p>{content}</p>
                   </Link>
-                  <Files />
                     <div className="Footer">
                       <p>{is_bookmark ? "⭐️" : null}</p>
                     </div>
+                    <Files />
                   </li>
               );
             }
