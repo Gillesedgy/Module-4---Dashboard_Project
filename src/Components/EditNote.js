@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 
 //* REACT-Icon
-import {ImCheckmark, ImCross} from 'react-icons/im'
+import { ImCheckmark, ImCross } from "react-icons/im";
 //
 const API = process.env.REACT_APP_API_URL;
 
@@ -56,11 +56,16 @@ export default function EditNote() {
   return (
     <div className=" ">
       <form
-        className="bg-emerald-400 h-[25rem] m-4 p-3 "
+        className="bg-emerald-400 h-[25rem] m-4 p-6 "
         onSubmit={handleSubmit}
       >
-       <button className="  bg-emerald-800 hover:bg-emerald-700 p-2 rounded-md mb-2 ml-[90%]" onClick={()=>navigate(`/notes/${id}`)}><ImCross/></button>
-       <br />
+        <button
+          className="  bg-emerald-800 hover:bg-emerald-700 p-2 rounded-md mb-2 ml-[90%]"
+          onClick={() => navigate(`/notes/${id}`)}
+        >
+          <ImCross />
+        </button>
+        <br />
         <input
           className=" font-bold bg-emerald-400 leading-tight focus:outline-none"
           type="text"
@@ -72,13 +77,10 @@ export default function EditNote() {
         <textarea
           className=" bg-emerald-400 w-full focus:outline-none resize-none"
           id="content"
-          // rows= "10"
-          // cold= "10"
           value={note.content}
           placeholder="Click to add text"
           onChange={handleTextChange}
         ></textarea>
-        {/* <label htmlFor="date">Date:</label> */}
         <input
           className=" bg-emerald-400  focus:outline-none hover:cursor-pointer "
           type="date"
@@ -88,9 +90,6 @@ export default function EditNote() {
           onChange={handleTextChange}
           required
         />{" "}
-        {/* <label className="ml-2" htmlFor="time">
-          Time
-        </label> */}
         <input
           className=" bg-emerald-400 focus:outline-none hover:cursor-pointer "
           type="time"
@@ -100,7 +99,9 @@ export default function EditNote() {
           onChange={handleTextChange}
           required
         />
-        <label className="hover:cursor-pointer" htmlFor="is_bookmark">Save</label>
+        <label className="hover:cursor-pointer" htmlFor="is_bookmark">
+          Save
+        </label>
         <input
           className="bg-emerald-400 hover:cursor-pointer "
           type="checkbox"
@@ -108,9 +109,12 @@ export default function EditNote() {
           checked={note.is_bookmark}
           onChange={handleCheckChange}
         />
-        <button className=" bg-emerald-800 hover:bg-emerald-700 p-1  rounded-md" type="submit">Done</button>
-        {/* <input className=" bg-emerald-800 hover:bg-emerald-700 p-1 rounded-md" type="submit" /> */}
-     
+        <button
+          className=" bg-emerald-800 hover:bg-emerald-700 p-1  rounded-md"
+          type="submit"
+        >
+          Done
+        </button>
       </form>
     </div>
   );
