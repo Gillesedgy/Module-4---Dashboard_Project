@@ -34,7 +34,7 @@ export default function CreateNote() {
     time: "",
     is_bookmark: false,
   });
-  let navigate = useNavigate();
+  // let navigate = useNavigate();
   //Add NEW Note
   const addNewNote = (addedNote) => {
     axios
