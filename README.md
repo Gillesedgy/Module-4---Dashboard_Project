@@ -1,13 +1,12 @@
- # Getting Started with Note App
+# Getting Started with Note App
 
 
 * `FORK` and `CLONE` [Frontend GitHub Repo](https://github.com/Gillesedgy/Module-4-Dashboard_Project) only to be used with [Back-End Repo](https://github.com/Gillesedgy/Dashboard-Server)
 [Render](https://note-server-8ds8.onrender.com/)
 
-
 # Description
 
-Note-It is an app that allows the user to create, view, update and even delete any notes on their app.
+Note-It is an app that allows the user to create, view, update and even delete any notes or tasks on their app.
 
 
 ## Instructions
