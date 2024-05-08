@@ -23,7 +23,7 @@ export default function Notes({
         setFiltered(res.data);
         setMyNotes(res.data);
       })
-      .catch((error) => console.warn(error));
+      .catch((error) => console.warn("catch",error));
   }, []);
 
   return (

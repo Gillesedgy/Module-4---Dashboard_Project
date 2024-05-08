@@ -1,4 +1,4 @@
-//! ONLY WAY FOR SITE TO DEPLPY WAS TO COMMENT OUT THIS FILE.. NOT SURE WHY
+//! ONLY WAY FOR SITE TO DEPLP0Y WAS TO COMMENT OUT THIS FILE.. NOT SURE WHY
 import CreateNote from "../Components/CreateNote.js";
 
 export default function New() {

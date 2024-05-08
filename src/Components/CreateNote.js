@@ -76,7 +76,7 @@ export default function CreateNote() {
   };
 
   return (
-    <div >
+    <div>
       {formModal ? (
         <form
           className="bg-emerald-400 h-[25rem] absolute z-10 m-4 p-3 rounded-br-xl "
@@ -164,6 +164,7 @@ export default function CreateNote() {
             </div>
           </div>
           <div className="flex justify-evenly">
+            {/* //! New Note Submit button */}
             <button
               className="flex items-center justify-center gap-2 shadow-xl border border-cyan-900 bg-slate-600 w-full p-3 my-2 hover:bg-slate-500 rounded-xl text-black"
               type="submit"
@@ -195,5 +196,4 @@ export default function CreateNote() {
       )}
     </div>
   );
-
 }
